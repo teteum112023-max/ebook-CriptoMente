@@ -1,18 +1,170 @@
-# 💎 CriptoMente — Guia Digital de Criptomoedas
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CriptoMente — Como Ganhar Dinheiro com Criptomoedas</title>
+  <meta name="description" content="CriptoMente — guia compacto para ganhar dinheiro com criptomoedas. Mentor confiante, estratégias reais e checklist prático.">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo="> 
+  <style>
+    :root{
+      --bg:#0b0b0b; --card:#0f0f10; --gold:#d4af37; --muted:#bfbfbf; --accent:#f5d88b;
+      --maxw:1000px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#050505 0%, #0b0b0b 100%);color:#eee;line-height:1.6}
+    .container{max-width:var(--maxw);margin:28px auto;padding:24px}
 
-O **CriptoMente** é um ebook e projeto educacional que ensina, de forma prática e direta, **como lucrar com criptomoedas** com segurança e estratégia.
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,#0b0b0b,#141414);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.6);border:1px solid rgba(212,175,55,.12)}
+    .logo h1{margin:0;font-size:18px;color:var(--gold);letter-spacing:0.6px}
+    .brand-title{display:block}
+    .brand-title h2{margin:0;font-size:16px;color:var(--gold)}
+    .brand-title p{margin:0;font-size:12px;color:var(--muted)}
 
-Este site apresenta a versão **compacta do ebook**, desenvolvida no estilo **Luxo Digital** — elegante, moderno e responsivo.  
-Voltado para **iniciantes e investidores experientes**, o conteúdo aborda:
+    nav{display:flex;gap:12px}
+    a.btn{background:transparent;border:1px solid rgba(212,175,55,.14);padding:10px 14px;border-radius:8px;color:var(--gold);text-decoration:none;font-weight:600}
+    a.cta{background:linear-gradient(90deg,var(--gold),#f3e0a6);color:#0a0a0a;padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none}
 
-- 🧠 Mindset e mentalidade financeira
-- 💹 Estratégias reais de lucro (holding, trading, staking)
-- 🔐 Segurança e controle de ativos
-- 📈 Tendências e oportunidades futuras no mercado cripto
+    /* Hero */
+    .hero{display:flex;gap:28px;align-items:center;padding:28px 6px}
+    .hero-left{flex:1}
+    .eyebrow{color:var(--gold);font-weight:700;margin-bottom:10px}
+    h1.title{font-size:34px;margin:0 0 12px;color:var(--gold);letter-spacing:0.2px}
+    p.lead{color:#e7e1d4;font-size:16px;margin:0 0 18px}
 
-📍 Acesse o site:
-👉 [https://seunome.github.io/criptomente-site/](https://seunome.github.io/criptomente-site/)
+    .hero-actions{display:flex;gap:12px;margin-top:6px}
+    .cover{width:320px;flex-shrink:0;border-radius:10px;padding:22px;background:linear-gradient(180deg,#0c0c0c,#121212);border:1px solid rgba(212,175,55,.08);box-shadow:0 18px 40px rgba(0,0,0,.6)}
+    .cover h3{color:var(--gold);margin:0 0 6px}
+    .cover p{margin:0;color:var(--muted);font-size:13px}
 
-📲 Redes sociais:
-- Instagram: [@criptomente](https://instagram.com/criptomente)
-- TikTok: [@criptomente](https://tiktok.com/@criptomente)
+    /* Content sections */
+    section.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:20px;margin-top:18px;border:1px solid rgba(255,255,255,0.03)}
+    h3.section-title{color:var(--gold);margin-top:0}
+    .two-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+    .list{padding-left:16px}
+    .muted{color:var(--muted);font-size:14px}
+
+    footer{margin-top:28px;padding:20px;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;align-items:center}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .hero{flex-direction:column;align-items:flex-start}
+      .cover{width:100%}
+      .two-cols{grid-template-columns:1fr}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><h1>CM</h1></div>
+        <div class="brand-title">
+          <h2>CriptoMente</h2>
+          <p class="muted">Mentoria & Guia Digital</p>
+        </div>
+      </div>
+      <nav>
+        <a class="btn" href="#conteudo">Sumário</a>
+        <a class="btn" href="#bonus">Checklist</a>
+        <a class="cta" href="#comprar">Comprar / Baixar</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <div class="eyebrow">Ebook — Versão Compacta</div>
+          <h1 class="title">CriptoMente<br/><small style="font-size:14px;color:#e7e1d4;font-weight:600">Como Ganhar Dinheiro de Verdade com Criptomoedas</small></h1>
+          <p class="lead">Guia direto e profissional para iniciantes e veteranos — estratégias práticas, segurança digital e mindset para lucrar no mercado cripto.</p>
+          <div class="hero-actions">
+            <a class="cta" href="#comprar">Comprar / Baixar</a>
+            <a class="btn" href="#conteudo">Ver Sumário</a>
+          </div>
+        </div>
+
+        <aside class="cover">
+          <h3>CriptoMente</h3>
+          <p class="muted">Como Ganhar Dinheiro de Verdade com Criptomoedas</p>
+          <p style="margin-top:14px;font-size:13px;color:var(--muted)">Versão compacta — Mentor confiante. Estilo: Luxo Digital.</p>
+          <div style="margin-top:18px;display:flex;gap:8px">
+            <a class="cta" href="#comprar">Comprar</a>
+            <a class="btn" href="sandbox:/mnt/data/CriptoMente_Ebook.pdf" download>Baixar PDF</a>
+          </div>
+        </aside>
+      </section>
+
+      <section id="conteudo" class="card">
+        <h3 class="section-title">O que você encontra dentro</h3>
+        <div class="two-cols">
+          <div>
+            <h4>Introdução & Mentalidade</h4>
+            <p class="muted">Aprenda a pensar como investidor antes de arriscar — estratégia e paciência são essenciais.</p>
+
+            <h4 style="margin-top:12px">Capítulo 1: O que são Criptomoedas</h4>
+            <p class="muted">Entenda blockchain, Bitcoin e por que nem toda moeda vale o investimento.</p>
+
+            <h4 style="margin-top:12px">Capítulo 2: Como se Ganha Dinheiro</h4>
+            <p class="muted">Holding, trading e renda passiva — as três formas reais de lucro.</p>
+          </div>
+
+          <div>
+            <h4>Capítulo 3: Segurança</h4>
+            <p class="muted">Exchanges confiáveis, 2FA e a regra: se não é sua chave, não é seu dinheiro.</p>
+
+            <h4 style="margin-top:12px">Capítulo 4: Estratégias</h4>
+            <p class="muted">DCA, análise de fundamentos, gerenciamento de risco e metas claras.</p>
+
+            <h4 style="margin-top:12px">Capítulos 5 & 6</h4>
+            <p class="muted">Erros a evitar e tendências futuras do mercado cripto.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="bonus" class="card">
+        <h3 class="section-title">Bônus — Checklist CriptoMente</h3>
+        <ul class="list muted">
+          <li>Escolha uma exchange confiável</li>
+          <li>Estude antes de investir</li>
+          <li>Comece com pouco</li>
+          <li>Diversifique sua carteira</li>
+          <li>Mantenha sua segurança digital</li>
+          <li>Tenha paciência — o tempo é seu melhor aliado</li>
+        </ul>
+      </section>
+
+      <section id="comprar" class="card">
+        <h3 class="section-title">Comprar / Baixar</h3>
+        <p class="muted">Oferta de lançamento — versão compacta pronta para usar como produto digital.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+          <!-- Placeholder payment link -->
+          <a class="cta" href="#" onclick="alert('Integração de pagamento a ser configurada. Substitua o link por sua página de checkout.')">Comprar por R$49</a>
+          <a class="btn" href="sandbox:/mnt/data/CriptoMente_Ebook.pdf" download>Baixar PDF (gratuito para teste)</a>
+        </div>
+        <p style="margin-top:12px;color:var(--muted)">Observação: substitua o botão de compra pelo link da sua plataforma (Hotmart, Kiwify, etc.).</p>
+      </section>
+
+      <section class="card">
+        <h3 class="section-title">Sobre a marca</h3>
+        <p class="muted">CriptoMente — inteligência e mentalidade para investidores. Conteúdo objetivo, sem promessas irreais. Autor: CriptoMente.</p>
+        <div style="margin-top:14px;display:flex;gap:10px;align-items:center">
+          <a class="btn" href="https://instagram.com/criptomente" target="_blank">Instagram @criptomente</a>
+          <a class="btn" href="https://tiktok.com/@criptomente" target="_blank">TikTok @criptomente</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="muted">© CriptoMente — Todos os direitos reservados</div>
+      <div class="muted">Contato: @criptomente</div>
+    </footer>
+  </div>
+</body>
+</html>
