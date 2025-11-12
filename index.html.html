@@ -1,283 +1,140 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CriptoMente — Aprenda a Ganhar Dinheiro com Criptomoedas</title>
-  <meta name="description" content="CriptoMente — site interativo com guia prático para ganhar dinheiro com criptomoedas. Dicas para iniciantes e veteranos." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CriptoMente – Como Ganhar Dinheiro com Criptomoedas</title>
   <style>
-    :root{--bg:#060606;--panel:#0f0f10;--gold:#D4AF37;--muted:#E7E1D4;--glass:rgba(255,255,255,0.03);--accent:#f3e0a6}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--muted);background:linear-gradient(180deg,var(--bg),#0b0b0b);-webkit-font-smoothing:antialiased}
-    a{color:inherit}
-    .wrap{max-width:1100px;margin:28px auto;padding:18px}
-
-    /* Header */
-    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,#0b0b0b,#141414);display:flex;align-items:center;justify-content:center;border:1px solid rgba(212,175,55,.12);box-shadow:0 10px 30px rgba(0,0,0,.6)}
-    .logo h1{margin:0;color:var(--gold);font-size:18px}
-    nav{display:flex;gap:10px}
-    nav a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:600}
-    .cta{background:linear-gradient(90deg,var(--gold),var(--accent));color:#070707;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:800}
-
-    /* Hero */
-    .hero{display:flex;gap:28px;align-items:center;margin-top:18px}
-    .hero .left{flex:1}
-    .eyebrow{color:var(--gold);font-weight:700}
-    h1.title{color:var(--gold);margin:6px 0;font-size:36px;line-height:1.02}
-    p.lead{color:var(--muted);margin:10px 0;font-size:16px}
-
-    /* interactive cards */
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,0.01),rgba(0,0,0,0.02));border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.03)}
-    .card h3{margin:8px 0;color:var(--gold)}
-    .muted{color:var(--muted)}
-
-    /* content sections */
-    section{margin-top:22px;padding:18px;border-radius:12px;background:transparent}
-    .panel{background:var(--panel);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-    h2{color:var(--gold)}
-    ul{padding-left:18px}
-
-    /* Accordion */
-    .accordion{margin-top:12px}
-    .acc-item{border-bottom:1px solid rgba(255,255,255,0.03)}
-    .acc-title{padding:12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
-    .acc-body{padding:0 12px 18px 12px;display:none;color:var(--muted)}
-
-    /* Checklist interactive */
-    .checklist{display:flex;flex-direction:column;gap:10px}
-    .checklist label{display:flex;align-items:center;gap:10px}
-    input[type=checkbox]{width:18px;height:18px}
-
-    /* Two columns */
-    .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-
-    footer{margin-top:22px;padding:20px;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;align-items:center}
-
-    /* responsive */
-    @media(max-width:980px){.grid{grid-template-columns:1fr}.two{grid-template-columns:1fr}.hero{flex-direction:column}.logo{width:52px;height:52px}}
-
-    /* simple animations */
-    .fade{opacity:0;transform:translateY(8px);transition:all .6s ease}
-    .fade.show{opacity:1;transform:none}
-
-    /* modal */
-    .modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);visibility:hidden;opacity:0;transition:all .25s}
-    .modal.open{visibility:visible;opacity:1}
-    .modal .box{background:#0b0b0b;padding:20px;border-radius:12px;border:1px solid rgba(212,175,55,.08);width:90%;max-width:640px}
-    .btn-close{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:8px;color:var(--muted)}
-
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #0b0b0b;
+      color: #f5f5f5;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #111, #000);
+      border-bottom: 2px solid #d4af37;
+    }
+    header h1 {
+      font-size: 3em;
+      color: #d4af37;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #ccc;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #d4af37;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .quote {
+      background-color: #1a1a1a;
+      border-left: 4px solid #d4af37;
+      padding: 20px;
+      font-style: italic;
+      margin: 30px 0;
+      border-radius: 8px;
+    }
+    img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #111;
+      border-top: 2px solid #d4af37;
+      font-size: 1em;
+    }
+    .social a {
+      color: #d4af37;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .highlight {
+      color: #d4af37;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo"><h1>CM</h1></div>
-        <div>
-          <div style="font-weight:800;color:var(--gold)">CriptoMente</div>
-          <div style="font-size:13px;color:var(--muted)">Guia Interativo: como ganhar com criptomoedas</div>
-        </div>
-      </div>
-      <nav>
-        <a href="#mentalidade">Mentalidade</a>
-        <a href="#formas">Como Ganhar</a>
-        <a href="#dicas">Dicas</a>
-        <a href="#seguranca">Segurança</a>
-        <a class="cta" href="#" id="open-cta">Baixar Apresentação</a>
-      </nav>
-    </header>
 
-    <main>
-      <section class="hero">
-        <div class="left">
-          <div class="eyebrow">Ebook Interativo</div>
-          <h1 class="title">CriptoMente — Como Ganhar Dinheiro de Verdade com Criptomoedas</h1>
-          <p class="lead">Aprenda com clareza: estratégias para iniciantes e veteranos, segurança digital e um checklist interativo para aplicar agora.</p>
+<header>
+  <h1>💎 CriptoMente</h1>
+  <p>Como ganhar dinheiro de verdade com criptomoedas — com estratégia, confiança e visão.</p>
+</header>
 
-          <div class="grid">
-            <div class="card">
-              <h3>Rápido</h3>
-              <p class="muted">Versão compacta com tudo que importa: mentalidade, estratégias e segurança.</p>
-            </div>
-            <div class="card">
-              <h3>Prático</h3>
-              <p class="muted">Táticas aplicáveis: DCA, diversificação, staking e trading inteligente.</p>
-            </div>
-            <div class="card">
-              <h3>Seguro</h3>
-              <p class="muted">Foco em proteção de capital: cold wallets, 2FA, verificação e prevenção.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+<section>
+  <h2>🧠 A Mentalidade CriptoMente</h2>
+  <p>Ganhar dinheiro com criptomoedas <span class="highlight">não é sorte</span> — é mentalidade. Aqui você aprende a pensar como um investidor, e não como um apostador.</p>
+  <div class="quote">“No mercado cripto, quem tem conhecimento domina o jogo.” — <strong>CriptoMente</strong></div>
+  <img src="https://images.unsplash.com/photo-1621504450181-5ec3f08d3b44?auto=format&fit=crop&w=1200&q=80" alt="Criptomoedas e tecnologia">
+</section>
 
-      <section id="mentalidade" class="panel fade">
-        <h2>🧠 Mentalidade CriptoMente</h2>
-        <p>Ganhar dinheiro com criptomoedas começa na sua cabeça. A mentalidade certa separa quem lucra de quem perde. Aqui você aprende a pensar como investidor: análise, paciência e disciplina.</p>
-        <div class="accordion">
-          <div class="acc-item">
-            <div class="acc-title" data-acc="1"><span>Por que a mentalidade importa?</span><strong>+</strong></div>
-            <div class="acc-body" id="acc-1">Porque o mercado testa sua racionalidade. Decisões emocionais geram prejuízo; decisões racionais geram consistência.</div>
-          </div>
-          <div class="acc-item">
-            <div class="acc-title" data-acc="2"><span>Como treinar disciplina?</span><strong>+</strong></div>
-            <div class="acc-body" id="acc-2">Defina regras claras: tamanho de posição, stop loss, metas de lucro e um plano de estudos diário. Pequenas rotinas criam grandes resultados.</div>
-          </div>
-        </div>
-      </section>
+<section>
+  <h2>📈 Como Ganhar Dinheiro com Cripto</h2>
+  <p>Existem três formas reais de lucrar:</p>
+  <ul>
+    <li><strong>Holding:</strong> comprar e manter moedas de longo prazo.</li>
+    <li><strong>Trading:</strong> aproveitar oscilações de curto prazo.</li>
+    <li><strong>Renda passiva:</strong> staking e DeFi — deixe suas moedas trabalharem por você.</li>
+  </ul>
+  <div class="quote">“O tempo no mercado vence o timing do mercado.” — <strong>Warren Buffett</strong></div>
+  <img src="https://images.unsplash.com/photo-1621504450185-0f6f3a3c1d4d?auto=format&fit=crop&w=1200&q=80" alt="Gráfico de crescimento cripto">
+</section>
 
-      <section id="formas" class="panel fade">
-        <h2>📈 Como se Ganha Dinheiro</h2>
-        <div class="two">
-          <div>
-            <h3>Holding</h3>
-            <p class="muted">Comprar e manter projetos sólidos (BTC, ETH) pensando no longo prazo — ideal para construir patrimônio.</p>
-            <details>
-              <summary style="cursor:pointer;color:var(--gold)">Exemplo prático</summary>
-              <p class="muted">Dolar cost averaging: invista R$200 todo mês em BTC por 1 ano — o preço médio protege contra grandes variações.</p>
-            </details>
-          </div>
-          <div>
-            <h3>Trading</h3>
-            <p class="muted">Operações de curto prazo baseadas em análise técnica; exige disciplina emocional e gerenciamento de risco (stop loss).</p>
-            <details>
-              <summary style="cursor:pointer;color:var(--gold)">Ferramentas úteis</summary>
-              <p class="muted">TradingView, indicadores (RSI, MACD), ordens limitadas e diário de trades.</p>
-            </details>
-          </div>
-        </div>
+<section>
+  <h2>🔐 Segurança Primeiro</h2>
+  <p>Proteja seu investimento:</p>
+  <ul>
+    <li>Use <span class="highlight">2FA</span> em todas as plataformas.</li>
+    <li>Guarde suas moedas em carteiras <span class="highlight">offline</span>.</li>
+    <li>Nunca compartilhe senhas ou códigos.</li>
+  </ul>
+  <div class="quote">“Se não são suas chaves, não são suas moedas.” — <strong>Andreas Antonopoulos</strong></div>
+</section>
 
-        <div style="margin-top:12px">
-          <h3>Renda Passiva</h3>
-          <p class="muted">Staking, lending e DeFi permitem que suas moedas gerem rendimento — sempre avalie o risco da plataforma.</p>
-        </div>
-      </section>
+<section>
+  <h2>🚀 Estratégias Avançadas</h2>
+  <p>Para veteranos e quem quer ir além:</p>
+  <ul>
+    <li><strong>DCA:</strong> invista valores fixos com constância.</li>
+    <li><strong>Análise de fundamentos:</strong> entenda o propósito da moeda.</li>
+    <li><strong>Gerencie riscos:</strong> nunca invista tudo em um único ativo.</li>
+  </ul>
+  <div class="quote">“O sucesso no mercado vem da paciência e do controle emocional.” — <strong>CriptoMente</strong></div>
+  <img src="https://images.unsplash.com/photo-1640340435264-cb3e8a60c5ef?auto=format&fit=crop&w=1200&q=80" alt="Estratégia financeira">
+</section>
 
-      <section id="dicas" class="panel fade">
-        <h2>💡 Dicas Práticas — Iniciantes e Veteranos</h2>
-        <div class="two">
-          <div>
-            <h3>Para Iniciantes</h3>
-            <ul>
-              <li>Comece com pouco; teste e aprenda.</li>
-              <li>Use DCA para reduzir risco de timing.</li>
-              <li>Ative 2FA e escolha exchanges confiáveis.</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Para Veteranos</h3>
-            <ul>
-              <li>Use on-chain analytics e análise de tokenomics.</li>
-              <li>Considere estratégias de arbitragem e hedging.</li>
-              <li>Participe de staking e oportunidades DeFi auditadas.</li>
-            </ul>
-          </div>
-        </div>
+<section>
+  <h2>🌍 O Futuro do Dinheiro</h2>
+  <p>As criptomoedas já são parte da economia global. Estar preparado é o que separa os curiosos dos vencedores.</p>
+  <div class="quote">“Bitcoin é uma revolução tecnológica e financeira.” — <strong>Elon Musk</strong></div>
+  <div class="quote">“Não se trata apenas de investir, mas de entender o novo mundo digital.” — <strong>Vitalik Buterin</strong></div>
+</section>
 
-        <div style="margin-top:14px" class="card">
-          <h3>Ferramentas Recomendadas</h3>
-          <p class="muted">TradingView, CoinGecko, Glassnode, Etherscan e plataformas de custódia confiáveis.</p>
-        </div>
-      </section>
-
-      <section id="seguranca" class="panel fade">
-        <h2>🔐 Segurança</h2>
-        <ul>
-          <li>Se não é sua chave, não é seu dinheiro — prefira wallets locais.</li>
-          <li>Cold wallets para grandes quantias; hot wallets para operações diárias.</li>
-          <li>Backup das seeds em local físico e seguro.</li>
-          <li>Desconfie de links e ofertas que prometem retorno garantido.</li>
-        </ul>
-
-        <div style="margin-top:12px" class="card">
-          <h3>Checklist Interativo</h3>
-          <div class="checklist" id="checklist">
-            <label><input type="checkbox" id="c1"> Configure 2FA na conta da exchange</label>
-            <label><input type="checkbox" id="c2"> Faça backup da seed da sua wallet</label>
-            <label><input type="checkbox" id="c3"> Comece o DCA mensal</label>
-            <label><input type="checkbox" id="c4"> Revise taxas e segurança da exchange</label>
-          </div>
-          <div style="margin-top:12px">
-            <button class="cta" id="save-check">Salvar checklist (gera resumo)</button>
-            <pre id="resume" style="background:#070707;padding:10px;border-radius:8px;margin-top:8px;display:none;color:var(--muted)"></pre>
-          </div>
-        </div>
-      </section>
-
-      <section class="panel fade">
-        <h2>⚠️ Erros que Destroem Fortunas</h2>
-        <ul>
-          <li>Cair em golpes e promessas milagrosas.</li>
-          <li>Investir por impulso baseado em hype.</li>
-          <li>Não diversificar ou ignorar gerenciamento de risco.</li>
-        </ul>
-      </section>
-
-      <section class="panel fade">
-        <h2>🌍 O Futuro do Dinheiro</h2>
-        <p class="muted">CBDCs, integração entre bancos e blockchains, e finanças descentralizadas cada vez mais presentes. Prepare-se para oportunidades e para transformar conhecimento em vantagem.</p>
-      </section>
-
-      <section class="panel fade">
-        <h2>🔑 Conclusão</h2>
-        <p class="muted">A liberdade financeira via criptomoedas exige estudo, método e proteção. Use este guia como seu guia prático e volte sempre que precisar.</p>
-        <p style="margin-top:12px"><strong>CriptoMente — @criptomente</strong></p>
-      </section>
-
-    </main>
-
-    <footer>
-      <div>© CriptoMente • Todos os direitos reservados</div>
-      <div><a href="https://instagram.com/criptomente" target="_blank">Instagram</a> • <a href="https://tiktok.com/@criptomente" target="_blank">TikTok</a></div>
-    </footer>
+<footer>
+  <p>Siga a <strong>CriptoMente</strong> para mais dicas e estratégias:</p>
+  <div class="social">
+    <a href="https://instagram.com/criptomente" target="_blank">Instagram</a> |
+    <a href="https://tiktok.com/@criptomente" target="_blank">TikTok</a>
   </div>
+  <p>© 2025 CriptoMente – Luxo Digital</p>
+</footer>
 
-  <!-- modal to download presentation -->
-  <div class="modal" id="modal">
-    <div class="box">
-      <h3 style="color:var(--gold);margin:0">Baixar apresentação CriptoMente</h3>
-      <p class="muted" style="margin-top:8px">Clique no botão abaixo para baixar a apresentação em PDF.</p>
-      <div style="display:flex;gap:8px;margin-top:12px">
-        <a class="cta" href="/CriptoMente_Presentation.pdf" download>Baixar PDF</a>
-        <button class="btn-close" id="close-modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // simple fade-in on load
-    document.addEventListener('DOMContentLoaded', ()=>{
-      document.querySelectorAll('.fade').forEach((el,i)=>setTimeout(()=>el.classList.add('show'), 120*i));
-
-      // accordion logic
-      document.querySelectorAll('.acc-title').forEach(btn=>{
-        btn.addEventListener('click', ()=>{
-          const id = btn.dataset.acc; const body = document.getElementById('acc-'+id);
-          const open = body.style.display === 'block';
-          document.querySelectorAll('.acc-body').forEach(b=>b.style.display='none');
-          document.querySelectorAll('.acc-title strong').forEach(s=>s.textContent='+');
-          if(!open){ body.style.display='block'; btn.querySelector('strong').textContent='-'; }
-        });
-      });
-
-      // modal logic
-      const modal = document.getElementById('modal');
-      document.getElementById('open-cta').addEventListener('click', (e)=>{e.preventDefault(); modal.classList.add('open');});
-      document.getElementById('close-modal').addEventListener('click', ()=>modal.classList.remove('open'));
-
-      // checklist save
-      document.getElementById('save-check').addEventListener('click', ()=>{
-        const items = [];
-        for(let i=1;i<=4;i++){ const el = document.getElementById('c'+i); items.push((el.checked? '✓':'✗') + ' ' + el.parentNode.textContent.trim()); }
-        const pre = document.getElementById('resume'); pre.style.display='block'; pre.textContent = 'Resumo do Checklist:\n' + items.join('\n');
-      });
-
-      // simple smooth scroll for nav links
-      document.querySelectorAll('nav a[href^="#"]').forEach(a=>{ a.addEventListener('click', function(e){ e.preventDefault(); const id=this.getAttribute('href'); document.querySelector(id).scrollIntoView({behavior:'smooth'}); }); });
-    });
-  </script>
 </body>
 </html>
