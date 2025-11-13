@@ -1,188 +1,230 @@
-# 1. Cria app com Vite + React + TS
-npm create vite@latest criptomente-app -- --template react-ts
-cd criptomente-app
+# 1️⃣ Cria pasta do projeto e entra nela
+mkdir criptomente-site
+cd criptomente-site
 
-# 2. Instala dependências essenciais
-npm install
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-npm install react-router-dom axios react-icons localforage
+# 2️⃣ Cria estrutura básica
+mkdir assets css js pages
 
-# 3. Configura Tailwind (substitua o conteúdo de tailwind.config.cjs)
-cat > tailwind.config.cjs <<'TWC' 
-module.exports = {
-  content: ["./index.html","./src/**/*.{ts,tsx,js,jsx}"],
-  theme: { extend: {} },
-  plugins: [],
+# 3️⃣ Cria arquivo index.html
+cat > index.html <<'HTML'
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CriptoMente | Ganhe Dinheiro com Criptomoedas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>💎 CriptoMente</h1>
+    <p>Como ganhar dinheiro de verdade com criptomoedas</p>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="pages/dicas.html">Dicas</a>
+      <a href="pages/seguranca.html">Segurança</a>
+      <a href="pages/estrategias.html">Estratégias</a>
+      <a href="pages/futuro.html">Futuro</a>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <h2>🧠 Mentalidade CriptoMente</h2>
+    <p>Ganhar com criptomoedas não é sorte — é mentalidade, paciência e estratégia. Aqui você aprende o que realmente funciona.</p>
+    <a href="pages/dicas.html" class="btn">Começar Agora</a>
+  </section>
+
+  <section class="quotes">
+    <h2>✨ Frases de Líderes do Mercado</h2>
+    <ul>
+      <li>"Se não é sua chave, não é seu dinheiro." — Andreas Antonopoulos</li>
+      <li>"A descentralização é uma das maiores inovações da internet." — CZ (Binance)</li>
+      <li>"O tempo no mercado vence o timing do mercado." — Warren Buffett</li>
+      <li>"Bitcoin é uma revolução tecnológica." — Elon Musk</li>
+      <li>"Não se trata só de ficar rico — é sobre construir o futuro." — Vitalik Buterin</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 CriptoMente | Siga-nos: @criptomente</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+HTML
+
+# 4️⃣ Cria página de dicas
+cat > pages/dicas.html <<'HTML'
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dicas | CriptoMente</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>💡 Dicas para Ganhar Dinheiro com Cripto</h1>
+  </header>
+  <main>
+    <h2>Passo a Passo CriptoMente</h2>
+    <ol>
+      <li>Aprenda o básico sobre blockchain e exchanges.</li>
+      <li>Crie conta em uma corretora confiável (ex: Binance, OKX).</li>
+      <li>Ative a autenticação 2FA antes de investir.</li>
+      <li>Invista com DCA (Dollar Cost Averaging) — valores fixos mensais.</li>
+      <li>Diversifique sua carteira: BTC, ETH e projetos sólidos.</li>
+      <li>Use wallets seguras (cold wallets para longo prazo).</li>
+      <li>Estude fundamentos antes de comprar altcoins.</li>
+      <li>Evite promessas milagrosas de ganhos rápidos.</li>
+      <li>Monitore o mercado com calma e paciência.</li>
+      <li>Tenha metas e disciplina: o lucro vem do tempo e estratégia.</li>
+    </ol>
+    <a href="../index.html" class="btn">Voltar</a>
+  </main>
+</body>
+</html>
+HTML
+
+# 5️⃣ Página de segurança
+cat > pages/seguranca.html <<'HTML'
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segurança | CriptoMente</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>🔐 Segurança no Mundo Cripto</h1>
+  </header>
+  <main>
+    <ul>
+      <li>Ative autenticação de dois fatores (2FA).</li>
+      <li>Use senhas fortes e únicas para cada plataforma.</li>
+      <li>Evite clicar em links suspeitos e phishing.</li>
+      <li>Use cold wallets para armazenar valores altos.</li>
+      <li>Nunca compartilhe suas chaves privadas.</li>
+      <li>Lembre-se: “Se não é sua chave, não é seu dinheiro.”</li>
+    </ul>
+    <a href="../index.html" class="btn">Voltar</a>
+  </main>
+</body>
+</html>
+HTML
+
+# 6️⃣ Página de estratégias
+cat > pages/estrategias.html <<'HTML'
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estratégias | CriptoMente</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>🚀 Estratégias de Lucro Cripto</h1>
+  </header>
+  <main>
+    <ul>
+      <li><strong>Holding:</strong> Comprar e segurar moedas fortes por longo prazo.</li>
+      <li><strong>Trading:</strong> Lucros rápidos com compra e venda estratégica.</li>
+      <li><strong>Staking e DeFi:</strong> Gere renda passiva deixando suas moedas trabalharem.</li>
+      <li><strong>DCA:</strong> Invista um valor fixo mensal para reduzir risco.</li>
+      <li><strong>Gestão de risco:</strong> Nunca invista mais do que pode perder.</li>
+    </ul>
+    <a href="../index.html" class="btn">Voltar</a>
+  </main>
+</body>
+</html>
+HTML
+
+# 7️⃣ Página sobre o futuro
+cat > pages/futuro.html <<'HTML'
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuro | CriptoMente</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>🌍 O Futuro do Dinheiro</h1>
+  </header>
+  <main>
+    <p>As criptomoedas já são o presente — bancos, empresas e governos estão adotando o digital.</p>
+    <ul>
+      <li>Expansão das moedas digitais governamentais (CBDCs).</li>
+      <li>Avanço das finanças descentralizadas (DeFi).</li>
+      <li>Integração total entre bancos e blockchain.</li>
+      <li>Oportunidades de emprego e investimento em Web3.</li>
+    </ul>
+    <blockquote>“O futuro pertence a quem entende o valor da descentralização.”</blockquote>
+    <a href="../index.html" class="btn">Voltar</a>
+  </main>
+</body>
+</html>
+HTML
+
+# 8️⃣ Cria CSS principal (Luxo Digital)
+cat > css/style.css <<'CSS'
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0; padding: 0;
+  background-color: #000;
+  color: #f5f5f5;
 }
-TWC
-
-# 4. Cria arquivos iniciais de conteúdo / estrutura (componentes e conteúdo)
-mkdir -p src/data src/pages src/components src/styles
-cat > src/data/content.json <<'JSON'
-{
-  "brand": {"name":"CriptoMente","tag":"Mentoria & Educação Cripto","contact":"@criptomente"},
-  "modules":[
-    {"id":"intro","title":"Mentalidade Cripto","content":"Ganhar com criptomoedas começa com mentalidade: aprender, disciplina e gestão de risco."},
-    {"id":"o-que-sao","title":"O que são criptomoedas","content":"Explicação simples sobre blockchain, Bitcoin, Ethereum e stablecoins."},
-    {"id":"como-ganhar","title":"Como ganhar dinheiro","content":"Holding, Trading e Renda Passiva (staking/DeFi); quando usar cada uma."},
-    {"id":"seguranca","title":"Segurança","content":"2FA, cold wallets, backups de seed e higiene digital."},
-    {"id":"estrategias","title":"Estratégias Avançadas","content":"DCA, diversificação, análise de fundamentos e gestão de risco."}
-  ],
-  "quotes":[
-    {"author":"Andreas Antonopoulos","text":"Se não é sua chave, não é seu dinheiro."},
-    {"author":"Vitalik Buterin","text":"Não se trata apenas de investir, mas de construir novas infraestruturas."},
-    {"author":"Elon Musk","text":"Bitcoin é uma revolução tecnológica e financeira."},
-    {"author":"CZ (Binance)","text":"Descentralização é uma das maiores inovações da internet."},
-    {"author":"Warren Buffett","text":"O tempo no mercado é mais importante que o timing do mercado."}
-  ]
+header.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #000 40%, #b99309);
+  color: gold;
 }
-JSON
-
-# 5. Cria App e páginas básicas (Home, Module, Checklist)
-cat > src/main.tsx <<'TSX'
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./styles/index.css";
-import Home from "./pages/Home";
-import Module from "./pages/Module";
-import Checklist from "./pages/Checklist";
-
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/module/:id' element={<Module/>}/>
-        <Route path='/checklist' element={<Checklist/>}/>
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
-);
-TSX
-
-cat > src/pages/Home.tsx <<'TSX'
-import React from 'react';
-import data from '../data/content.json';
-import { Link } from 'react-router-dom';
-
-export default function Home(){
-  return (
-    <div className='min-h-screen bg-black text-gray-200 p-8'>
-      <header className='max-w-4xl mx-auto text-center'>
-        <h1 className='text-4xl text-yellow-400 font-bold'>{data.brand.name}</h1>
-        <p className='mt-2 text-gray-300'>{data.brand.tag}</p>
-      </header>
-
-      <main className='max-w-4xl mx-auto mt-8'>
-        <section className='bg-gray-900 p-6 rounded-lg shadow-lg'>
-          <h2 className='text-2xl text-yellow-400 mb-2'>Aprenda a ganhar com cripto</h2>
-          <p className='text-gray-300'>Conteúdo prático para iniciantes e veteranos: mentalidade, segurança e estratégias reais.</p>
-        </section>
-
-        <section className='grid gap-4 mt-6'>
-          {data.modules.map((m)=>(
-            <Link key={m.id} to={'/module/'+m.id} className='block p-4 bg-gray-900 rounded-lg hover:bg-gray-800'>
-              <h3 className='text-xl text-yellow-400'>{m.title}</h3>
-              <p className='text-gray-300 mt-1'>{m.content.substring(0,120)}...</p>
-            </Link>
-          ))}
-        </section>
-
-        <section className='mt-6 text-center'>
-          <Link to='/checklist' className='inline-block bg-yellow-400 text-black px-6 py-3 rounded-full font-bold'>Abrir Checklist</Link>
-        </section>
-
-        <section className='mt-8'>
-          <h3 className='text-yellow-400'>Citações</h3>
-          <ul className='mt-3 space-y-2'>
-            {data.quotes.map((q,idx)=>(
-              <li key={idx} className='text-gray-300 italic'>&ldquo;{q.text}&rdquo; — <strong className='text-yellow-300'>{q.author}</strong></li>
-            ))}
-          </ul>
-        </section>
-      </main>
-    </div>
-  )
+header.hero h1 { font-size: 3rem; margin: 0; }
+header.hero nav a {
+  margin: 0 10px; text-decoration: none;
+  color: gold; font-weight: bold;
 }
-TSX
-
-cat > src/pages/Module.tsx <<'TSX'
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import data from '../data/content.json';
-
-export default function Module(){
-  const { id } = useParams();
-  const module = data.modules.find(m=>m.id===id);
-  if(!module) return <div className='p-8'>Módulo não encontrado. <Link to='/'>Voltar</Link></div>;
-  return (
-    <div className='min-h-screen bg-black p-8 text-gray-200'>
-      <div className='max-w-3xl mx-auto'>
-        <Link to='/' className='text-yellow-400'>&larr; Voltar</Link>
-        <h1 className='text-3xl text-yellow-400 mt-4'>{module.title}</h1>
-        <p className='mt-4 text-gray-300'>{module.content}</p>
-
-        {/* Aqui você adiciona passos detalhados; exemplo para 'como-ganhar' */}
-        {module.id==='como-ganhar' && (
-          <div className='mt-6'>
-            <h2 className='text-yellow-300'>Passo a passo prático</h2>
-            <ol className='list-decimal ml-6 mt-2 text-gray-300'>
-              <li>Aprenda o básico: blockchain, chaves, exchanges.</li>
-              <li>Abra conta em uma exchange confiável e habilite 2FA.</li>
-              <li>Comece com DCA: invista pequeno valor mensal.</li>
-              <li>Estude fundamentos antes de comprar altcoins.</li>
-              <li>Use uma wallet cold para reserva de valor.</li>
-            </ol>
-          </div>
-        )}
-      </div>
-    </div>
-  )
+.btn {
+  background-color: gold; color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: bold;
 }
-TSX
-
-cat > src/pages/Checklist.tsx <<'TSX'
-import React, {useState} from 'react';
-
-const items = [
-  'Configurar 2FA na exchange',
-  'Fazer backup da seed da wallet',
-  'Iniciar DCA (valor mensal)',
-  'Revisar taxas e segurança'
-];
-
-export default function Checklist(){
-  const [checked, setChecked] = useState<boolean[]>(new Array(items.length).fill(false));
-  return (
-    <div className='min-h-screen bg-black p-8 text-gray-200'>
-      <div className='max-w-3xl mx-auto bg-gray-900 p-6 rounded-lg'>
-        <h1 className='text-2xl text-yellow-400'>Checklist CriptoMente</h1>
-        <ul className='mt-4 space-y-3'>
-          {items.map((it,i)=>(
-            <li key={i} className='flex items-center gap-3'>
-              <input type='checkbox' checked={checked[i]} onChange={()=>{const c=[...checked]; c[i]=!c[i]; setChecked(c);} }/>
-              <span className='text-gray-300'>{it}</span>
-            </li>
-          ))}
-        </ul>
-        <div className='mt-4'>
-          <button className='bg-yellow-400 text-black px-4 py-2 rounded' onClick={()=>alert('Checklist salvo localmente (exemplo)')}>Salvar</button>
-        </div>
-      </div>
-    </div>
-  )
+section { padding: 2rem; text-align: center; }
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
 }
-TSX
-
-# 6. Cria estilos base (Tailwind entrada)
-cat > src/styles/index.css <<'CSS'
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-body { @apply bg-black; }
+.page-header {
+  background: #111;
+  padding: 1.5rem;
+  text-align: center;
+  color: gold;
+}
+ul, ol { text-align: left; max-width: 700px; margin: auto; line-height: 1.8; }
+blockquote {
+  font-style: italic;
+  color: #ccc;
+  border-left: 4px solid gold;
+  padding-left: 1rem;
+}
 CSS
 
-# 7. Adiciona scripts e inicia dev server
-npm run dev
+# 9️⃣ Cria JS simples (interações futuras)
+cat > js/main.js <<'JS'
+console.log("CriptoMente – Site Luxo Digital iniciado");
+JS
